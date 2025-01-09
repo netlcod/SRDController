@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>connect-96px.png</file>
+        <file>disconnect-96px.png</file>
+        <file>load-96px.png</file>
+        <file>save-96px.png</file>
+		<file>enable-plotting-96px.png</file>
+        <file>fit-content-96px.png</file>
+        <file>coordinate-x-96px.png</file>
+        <file>coordinate-y-96px.png</file>
+    </qresource>
+</RCC>

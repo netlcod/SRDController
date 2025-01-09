@@ -1,0 +1,184 @@
+{
+	"ptuStopCmd": {
+		"CMD" : 300,
+		"NAME" : "Stop actuators",
+		"TYPE" : 10,
+		"UNITS" : "",
+		"NOTES" : "-°"
+	},
+	"ptuYawCmdPos": {
+		"CMD" : 1300,
+		"NAME" : "Yaw position set-point",
+		"TYPE" : 2,
+		"UNITS" : "deg",
+		"NOTES" : "-180° ÷ 180°"
+	},
+	"ptuYawCmdSpeed": {
+		"CMD" : 1301,
+		"NAME" : "Yaw velocity set-point",
+		"TYPE" : 2,
+		"UNITS" : "deg/s",
+		"NOTES" : "-"
+	},
+	"ptuYawCmdRelPos": {
+		"CMD" : 1302,
+		"NAME" : "Yaw relative position set-point",
+		"TYPE" : 2,
+		"UNITS" : "deg",
+		"NOTES" : "-"
+	},
+	"ptuYawPos": {
+		"CMD" : 1303,
+		"NAME" : "Yaw actual position",
+		"TYPE" : 2,
+		"UNITS" : "deg",
+		 "NOTES" : "-180° ÷ 180°"
+	},
+	"ptuYawSpeed": {
+		"CMD" : 1304,
+		"NAME" : "Yaw actual velocity",
+		"TYPE" : 2,
+		"UNITS" : "deg/s",
+		"NOTES" : "-"
+	},
+	"ptuYawEngineTemp": {
+		"CMD" : 1305,
+		"NAME" : "Yaw motor temperature",
+		"TYPE" : 2,
+		"UNITS" : "°C",
+		"NOTES" : "-"
+	},
+	"ptuYawCmdMode": {
+		"CMD" : 1307,
+		"NAME" : "Yaw actuator mode",
+		"TYPE" : 10,
+		"UNITS" : "-",
+		"NOTES" : "0 – Free run\n1 – Without brake\n2 – Auto brake\n"
+	},
+	"ptuYawMode": {
+		"CMD" : 1308,
+		"NAME" : "Yaw current actuator mode",
+		"TYPE" : 10,
+		"UNITS" : "-",
+		"NOTES" : "0 – Free run\n1 – Without brake\n2 – Auto brake\n"
+	},
+	"ptuYawCurrentBusVoltage": {
+		"CMD" : 1461,
+		"NAME" : "Yaw current bus voltage",
+		"TYPE" : 2,
+		"UNITS" : "V",
+		"NOTES" : "-"
+	},
+	"ptuYawActualCurrent": {
+		"CMD" : 1462,
+		"NAME" : "Yaw actual current",
+		"TYPE" : 2,
+		"UNITS" : "V",
+		"NOTES" : "-"
+	},
+	"ptuYawCurrentStatus": {
+		"CMD" : 1467,
+		"NAME" : "Yaw current status",
+		"TYPE" : 10,
+		"UNITS" : "0-1\tTarget reached:\t0 - Not reached\t1- Reached\t2 - Jog\n2-3\tActuator mode:\t0 - Free run\t1 - Without brake\t2 - Auto brake\n7\tActuator state\t0 - Disabled\t1 - Enabled",
+		"NOTES" : "-"
+	},
+	"ptuPitchCmdPos": {
+		"CMD" : 1310,
+		"NAME" : "Pitch position set-point",
+		"TYPE" : 2,
+		"UNITS" : "deg",
+		"NOTES" : "-180° ÷ 180°"
+	},
+	"ptuPitchCmdSpeed": {
+		"CMD" : 1311,
+		"NAME" : "Pitch velocity set-point",
+		"TYPE" : 2,
+		"UNITS" : "deg/s",
+		"NOTES" : "-"
+	},
+	"ptuPitchCmdRelPos": {
+		"CMD" : 1312,
+		"NAME" : "Pitch relative position set-point",
+		"TYPE" : 2,
+		"UNITS" : "deg",
+		"NOTES" : "-"
+	},
+	"ptuPitchPos": {
+		"CMD" : 1313,
+		"NAME" : "Pitch actual position",
+		"TYPE" : 2,
+		"UNITS" : "deg",
+		"NOTES" : "-180° ÷ 180°"
+	},
+	"ptuPitchSpeed": {
+		"CMD" : 1314,
+		"NAME" : "Pitch actual velocity",
+		"TYPE" : 2,
+		"UNITS" : "deg/s",
+		"NOTES" : "-"
+	},
+	"ptuPitchEngineTemp": {
+		"CMD" : 1315,
+		"NAME" : "Pitch motor temperature",
+		"TYPE" : 2,
+		"UNITS" : "°C",
+		"NOTES" : "-"
+	},
+	"ptuPitchEngineState": {
+		"CMD" : 1316,
+		"NAME" : "Pitch engine state",
+		"TYPE" : 10,
+		"UNITS" : "-",
+		"NOTES" : "0 – Normal\n1 – Warning\n2 – Critical\n"
+	},
+	"ptuPitchCmdMode": {
+		"CMD" : 1317,
+		"NAME" : "Pitch actuator mode",
+		"TYPE" : 10,
+		"UNITS" : "-",
+		"NOTES" : "0 – Free run\n1 – Without brake\n2 – Auto brake\n"
+	},
+	"ptuPitchMode": {
+		"CMD" : 1318,
+		"NAME" : "Pitch current actuator mode",
+		"TYPE" : 10,
+		"UNITS" : "-",
+		"NOTES" : "0 – Free run\n1 – Without brake\n2 – Auto brake\n"
+	},
+	"ptuRememberCurrentPos": {
+		"CMD" : 1420,
+		"NAME" : "Remember current position",
+		"TYPE" : 10,
+		"UNITS" : "-",
+		"NOTES" : "1 – Remember current yaw and pitch position"
+	},
+	"ptuRestoreCurrentPos": {
+		"CMD" : 1421,
+		"NAME" : "Restore current position",
+		"TYPE" : 10,
+		"UNITS" : "-",
+		"NOTES" : "1 – Set yaw and pitch to saved position"
+	},
+	"ptuPitchCurrentBusVoltage": {
+		"CMD" : 1481,
+		"NAME" : "Pitch current bus voltage",
+		"TYPE" : 2,
+		"UNITS" : "V",
+		"NOTES" : "-"
+	},
+	"ptuPitchActualCurrent": {
+		"CMD" : 1482,
+		"NAME" : "Pitch actual current",
+		"TYPE" : 2,
+		"UNITS" : "V",
+		"NOTES" : "-"
+	},
+	"ptuPitchCurrentStatus": {
+		"CMD" : 1487,
+		"NAME" : "Pitch current status",
+		"TYPE" : 10,
+		"UNITS" : "0-1\tTarget reached:\t0 - Not reached\t1- Reached\t2 - Jog\n2-3\tActuator mode:\t0 - Free run\t1 - Without brake\t2 - Auto brake\n7\tActuator state\t0 - Disabled\t1 - Enabled",
+		"NOTES" : "-"
+	}
+}
