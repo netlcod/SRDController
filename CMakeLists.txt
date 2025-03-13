@@ -81,9 +81,16 @@ target_compile_definitions(${PROJECT} PRIVATE
 
 add_library(quasyncserialport SHARED IMPORTED)
 
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    set(LIB_SERIALPORT "libquasyncserialportd.dll")
+    set(IMPLIB_NAME "libquasyncserialportd.dll.a")
+else()
+    set(LIB_SERIALPORT "libquasyncserialport.dll")
+    set(IMPLIB_NAME "libquasyncserialport.dll.a")
+endif()
 set_property(TARGET quasyncserialport PROPERTY
-    IMPORTED_LOCATION   ${QUDEVICE_DIR}/${CMAKE_BUILD_TYPE}/bin/libquasyncserialportd.dll
-    IMPORTED_IMPLIB     ${QUDEVICE_DIR}/${CMAKE_BUILD_TYPE}/lib/libquasyncserialportd.dll.a
+    IMPORTED_LOCATION   ${QUDEVICE_DIR}/${CMAKE_BUILD_TYPE}/bin/${LIB_SERIALPORT}
+    IMPORTED_IMPLIB     ${QUDEVICE_DIR}/${CMAKE_BUILD_TYPE}/lib/${IMPLIB_NAME}
 )
 
 target_compile_definitions(${PROJECT} PRIVATE
@@ -102,7 +109,7 @@ target_link_directories(${PROJECT} PRIVATE
 target_link_libraries(${PROJECT} PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::SerialPort
-    libquasyncserialportd.dll
+    ${LIB_SERIALPORT}
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -128,9 +135,16 @@ install(TARGETS ${PROJECT}
 
 add_custom_command(
     TARGET ${PROJECT} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
             "${CMAKE_SOURCE_DIR}/src/can.json"
             "${CMAKE_CURRENT_BINARY_DIR}/can.json"
+)
+
+add_custom_command(
+    TARGET ${PROJECT} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${QUDEVICE_DIR}/${CMAKE_BUILD_TYPE}/bin/${LIB_SERIALPORT}
+            "${CMAKE_CURRENT_BINARY_DIR}/${LIB_SERIALPORT}"
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
